@@ -22,6 +22,10 @@ TODO://
  1. Swagger : I love it
  2. Entity Framework integration with MS SQL.
  
+ Current Status of the repo
+ Tests : All pass 
+ 
+ 
 
 	
 	
