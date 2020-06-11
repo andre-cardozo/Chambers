@@ -20,7 +20,8 @@ Tests Folder
 
 TODO://
  1. Swagger : I love it
- 2. Entity Framework 
+ 2. Entity Framework integration with MS SQL.
+ 
 
 	
 	
