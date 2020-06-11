@@ -10,5 +10,6 @@ namespace Chambers.DocumentLibrary.Repositories
         void Delete(string location);
         List<AttachmentResponse> Get();
         HttpContent GetStream(string location);
+        void Add();
     }
 }

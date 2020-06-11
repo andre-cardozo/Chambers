@@ -11,6 +11,9 @@ using System.Net.Http.Headers;
 
 namespace Chambers.DocumentLibrary.BusinessServices
 {
+    /// <summary>
+    /// A service that handles saving and retrieving of PDF documents
+    /// </summary>
     public class DocumentService : IDocumentService
     {
         private readonly IDocumentRepository _documentRepo;
@@ -19,13 +22,18 @@ namespace Chambers.DocumentLibrary.BusinessServices
         {
             _documentRepo = documentRepo;
         }
+
+        /// <summary>
+        /// Adds a document to the repository
+        /// </summary>
+        /// <param name="attachment"></param>
         public void Add(AttachmentRequest attachment)
         {
             //valid attachment type.
 
             if (ValidateAttachment(attachment, "application/pdf"))
             {
-
+                _documentRepo.Add();
             }
 
 
@@ -70,11 +78,20 @@ namespace Chambers.DocumentLibrary.BusinessServices
         {
             return direction == Enums.OrderDirection.Asc ? attachments.AsQueryable().OrderBy(reorderField).ToList() : attachments.AsQueryable().OrderByDescending(d => d.FileName).ToList();
         }
-
+        /// <summary>
+        /// Retrieve all the documents from the repo
+        /// </summary>
+        /// <returns></returns>
         public List<AttachmentResponse> Get()
         {
           return  _documentRepo.Get();
         }
+
+        /// <summary>
+        /// Retrieve a document by location from the repo
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns></returns>
         public HttpResponseMessage Get(string location)
         {
             //Assumption: documents are stored in S3 bucket, blob or file system and no in the DB
@@ -89,7 +106,10 @@ namespace Chambers.DocumentLibrary.BusinessServices
             return response;
         }
 
-
+        /// <summary>
+        /// Delete a document from the repo
+        /// </summary>
+        /// <param name="chosenPdfLocation"></param>
         public void Delete(string chosenPdfLocation)
         {
            //delete the document from storage and remove the record from DB

@@ -28,5 +28,10 @@ namespace Chambers.DocumentLibrary.Repositories
 
             throw new NotImplementedException();
         }
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
