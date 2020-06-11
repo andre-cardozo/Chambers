@@ -16,11 +16,16 @@ Domain Models
 Tests Folder
   - Unit Tests
   - Integration Tests
-  - TestData (You will be surprised how much test data is repeated)
+  - TestData (You will be surprised how much test data is repeated and can be shared among tests)
 
 TODO://
  1. Swagger : I love it
- 2. Entity Framework 
+ 2. Entity Framework integration with MS SQL.
+ 
+ Current Status of the repo
+ Tests : All pass 
+ 
+ 
 
 	
 	
