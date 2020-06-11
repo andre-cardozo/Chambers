@@ -1,0 +1,11 @@
+Chambers.DocumentLibrary.BusinessServices/bin/Debug/
+Chambers.DocumentLibrary.BusinessServices/obj/
+Chambers.DocumentLibrary.Configurations/obj/
+Chambers.DocumentLibrary.DomainModels/bin/Debug/
+Chambers.DocumentLibrary.DomainModels/obj/Chambers.DocumentLibrary.DomainModels.csproj.nuget.g.targets
+Chambers.DocumentLibrary.DomainModels/obj/
+Chambers.DocumentLibrary.Exceptions/obj/
+*/obj/*
+*/bin/*
+Chambers.DocumentLibrary.WebApi/.vs/Chambers.DocumentLibrary.WebApi/config/applicationhost.config
+Chambers.DocumentLibrary.WebApi/.vs/
